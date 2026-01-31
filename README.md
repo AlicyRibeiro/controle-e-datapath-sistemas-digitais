@@ -4,6 +4,8 @@ Este repositório contém as resoluções das questões do **Bloco de Controle e
 
 O foco deste bloco está na análise e no projeto de **unidades de controle**, **máquinas de estados finitos (FSM)** e na integração entre **controle e datapath**, fundamentais para a compreensão de arquiteturas digitais e processadores.
 
+⚠️ Esta lista foi dividida em múltiplos repositórios apenas por organização, mantendo-se parte de uma mesma lista de exercícios.
+
 ---
 
 ## Informações da Disciplina
