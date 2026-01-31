@@ -37,7 +37,7 @@ Os arquivos de simulação (`.dig`) estão linkados diretamente nas resoluções
 
 Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapath**, organizadas conforme o documento da disciplina.
 
-### 1. Bloco de Controle e Datapath
+### 2. Bloco de Controle e Datapath
 
 *(Questões do Livro: 3.1–3.3; 3.27–3.30; 3.39; 3.44–3.45; 5.1–5.3; 5.6–5.11; 5.15; 5.18–5.19; 5.22–5.23; 6.32; 6.33; 6.39)*
 
