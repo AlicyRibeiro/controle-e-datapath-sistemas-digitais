@@ -109,7 +109,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 🔗 Repositório principal da lista:
 As demais questões da Lista 01 podem ser encontradas em:
 
-exercicios-sistemas-digitais
+[exercicios-sistemas-digitais](https://github.com/AlicyRibeiro/exercicios-sistemas-digitais)
 
 ---
 ## Aviso Legal
