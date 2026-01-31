@@ -1,10 +1,8 @@
 # Exercícios de Sistemas Digitais — Controle e Datapath
 
-Este repositório contém as resoluções das questões do **Bloco de Controle e Datapath** da lista de exercícios da disciplina de Sistemas Digitais.
+Este repositório contém as resoluções do Bloco de Controle e Datapath da primeira lista de exercícios da disciplina de Sistemas Digitais.
 
-O foco deste bloco está na análise e no projeto de **unidades de controle**, **máquinas de estados finitos (FSM)** e na integração entre **controle e datapath**, fundamentais para a compreensão de arquiteturas digitais e processadores.
-
-⚠️ Esta lista foi dividida em múltiplos repositórios apenas por organização, mantendo-se parte de uma mesma lista de exercícios.
+As questões aqui apresentadas fazem parte da mesma lista original do repositório exercicios-sistemas-digitais, tendo sido organizadas separadamente apenas por motivos de clareza, volume e organização temática.
 
 ---
 
@@ -108,6 +106,12 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 
 ---
 
+🔗 Repositório principal da lista:
+As demais questões da Lista 01 podem ser encontradas em:
+
+exercicios-sistemas-digitais
+
+---
 ## Aviso Legal
 
 Este repositório contém resoluções de exercícios baseados no livro  
