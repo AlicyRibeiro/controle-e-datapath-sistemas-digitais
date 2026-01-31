@@ -4,6 +4,10 @@ Este repositório contém as resoluções do Bloco de Controle e Datapath da pri
 
 As questões aqui apresentadas fazem parte da mesma lista original do repositório exercicios-sistemas-digitais, tendo sido organizadas separadamente apenas por motivos de clareza, volume e organização temática.
 
+As demais questões da Lista 01 podem ser encontradas em:
+
+[exercicios-sistemas-digitais](https://github.com/AlicyRibeiro/exercicios-sistemas-digitais)
+
 ---
 
 ## Informações da Disciplina
@@ -106,12 +110,6 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 
 ---
 
-🔗 Repositório principal da lista:
-As demais questões da Lista 01 podem ser encontradas em:
-
-[exercicios-sistemas-digitais](https://github.com/AlicyRibeiro/exercicios-sistemas-digitais)
-
----
 ## Aviso Legal
 
 Este repositório contém resoluções de exercícios baseados no livro  
