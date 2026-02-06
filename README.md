@@ -69,7 +69,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Projeto de FSM: Gerador de Código Gray](02-Bloco-de-Controle-e-Datapath/Q-3-29/Q-3-29-resolucao.md)
 
 * **Questão 3.30:**  
-  [Análise: Diagrama de Tempo da FSM de Código Gray](Q-3-30/Q-3-30-resolucao.md)
+  [Análise: Diagrama de Tempo da FSM de Código Gray](02-Bloco-de-Controle-e-Datapath/Q-3-30/Q-3-30-resolucao.md)
 
 * **Questão 3.39:**  
   [Projeto de Bloco de Controle com FSM](Q-3-39/Q-3-39-resolucao.md)
