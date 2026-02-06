@@ -6,7 +6,7 @@ Calcule o período de relógio para as seguintes frequências de relógio.
 
 ---
 
-### 50 KHz (primeiros computadores)
+### a) 50 KHz (primeiros computadores)
 
 #### O Princípio Fundamental
 
@@ -33,7 +33,7 @@ Para converter de segundos para microssegundos (µs), multiplicamos por 1.000.00
 
 ---
 
-### 300 MHz (processador da Playstation 2 da Sony)
+### b) 300 MHz (processador da Playstation 2 da Sony)
 
 **Converter Frequência:**  
 300 MHz = 300 × 1.000.000 Hz = 300.000.000 Hz  
@@ -48,7 +48,7 @@ Para nanossegundos (ns), multiplicamos por 1.000.000.000.
 
 ---
 
-### 3,4 GHz (processador Pentium 4 da Intel)
+### c) 3,4 GHz (processador Pentium 4 da Intel)
 
 **Converter Frequência:**  
 3,4 GHz = 3,4 × 1.000.000.000 Hz = 3.400.000.000 Hz  
@@ -63,7 +63,7 @@ Para picossegundos (ps), multiplicamos por 10¹².
 
 ---
 
-### 10 GHz (PCs do início da década de 2000)
+### d) 10 GHz (PCs do início da década de 2000)
 
 **Converter Frequência:**  
 10 GHz = 10.000.000.000 Hz  
@@ -76,7 +76,7 @@ T = 1 / 10.000.000.000 s = 0,0000000001 s
 
 ---
 
-### 1 THz (1 Terahertz)
+### e) 1 THz (1 Terahertz)
 
 **Converter Frequência:**  
 1 THz = 1.000.000.000.000 Hz  
@@ -86,3 +86,4 @@ T = 1 / 1.000.000.000.000 s = 0,000000000001 s
 
 **Converter Resultado:**  
 0,000000000001 s × 10¹² = **1 ps**
+
