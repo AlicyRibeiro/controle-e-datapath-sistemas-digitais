@@ -72,7 +72,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Análise: Diagrama de Tempo da FSM de Código Gray](02-Bloco-de-Controle-e-Datapath/Q-3-30/Q-3-30-resolucao.md)
 
 * **Questão 3.39:**  
-  [Projeto de Bloco de Controle com FSM](Q-3-39/Q-3-39-resolucao.md)
+  [Projeto de Bloco de Controle com FSM](02-Bloco-de-Controle-e-Datapath/Q-3-39/Q-3-39-resolucao.md)
 
 * **Questão 3.44:**  
   [Análise de Controle Sequencial](Q-3-44/Q-3-44-resolucao.md)
