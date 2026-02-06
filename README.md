@@ -75,7 +75,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Projeto de Bloco de Controle com FSM](02-Bloco-de-Controle-e-Datapath/Q-3-39/Q-3-39-resolucao.md)
 
 * **Questão 3.44:**  
-  [Análise de Controle Sequencial](Q-3-44/Q-3-44-resolucao.md)
+  [Análise de Controle Sequencial](02-Bloco-de-Controle-e-Datapath/Q-3-44/Q-3-44-resolucao.md)
 
 * **Questão 3.45:**  
   [Análise de Controle Sequencial](Q-3-45/Q-3-45-resolucao.md)
