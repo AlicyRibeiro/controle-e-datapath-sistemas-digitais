@@ -60,13 +60,13 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Cálculo: Período ↔ Frequência](02-Bloco-de-Controle-e-Datapath/Q-3-3/Q-3-3-resolucao.md)
 
 * **Questão 3.27:**  
-  [Projeto de FSM: Relógio de Pulso (Avanço de Item)](Q-3-27/Q-3-27-resolucao.md)
+  [Projeto de FSM: Relógio de Pulso (Avanço de Item)](02-Bloco-de-Controle-e-Datapath/Q-3-27/Q-3-27-resolucao.md)
 
 * **Questão 3.28:**  
-  [Projeto de FSM: Adição de Reset (R) ao Relógio](Q-3-28/Q-3-28-resolucao.md)
+  [Projeto de FSM: Adição de Reset (R) ao Relógio](02-Bloco-de-Controle-e-Datapath/Q-3-28/Q-3-28-resolucao.md)
 
 * **Questão 3.29:**  
-  [Projeto de FSM: Gerador de Código Gray](Q-3-29/Q-3-29-resolucao.md)
+  [Projeto de FSM: Gerador de Código Gray](02-Bloco-de-Controle-e-Datapath/Q-3-29/Q-3-29-resolucao.md)
 
 * **Questão 3.30:**  
   [Análise: Diagrama de Tempo da FSM de Código Gray](Q-3-30/Q-3-30-resolucao.md)
