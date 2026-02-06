@@ -52,8 +52,12 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 * **Questão 3.1 & 3.2:**  
   [Cálculo: Frequência ↔ Período](02-Bloco-de-Controle-e-Datapath/Q-3-1)
 
+
+* **Questão 3.2:**  
+  [Cálculo: Frequência ↔ Período](02-Bloco-de-Controle-e-Datapath/Q-3-2)
+
 * **Questão 3.3:**  
-  [Cálculo: Período ↔ Frequência](Q-3-3/Q-3-3-resolucao.md)
+  [Cálculo: Período ↔ Frequência](02-Bloco-de-Controle-e-Datapath/Q-3-3/Q-3-3-resolucao.md)
 
 * **Questão 3.27:**  
   [Projeto de FSM: Relógio de Pulso (Avanço de Item)](Q-3-27/Q-3-27-resolucao.md)
