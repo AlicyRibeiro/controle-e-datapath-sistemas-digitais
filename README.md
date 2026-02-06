@@ -50,7 +50,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 ### Capítulo 3 — Controle e FSM
 
 * **Questão 3.1 & 3.2:**  
-  [Cálculo: Frequência ↔ Período](Q-3-1/Q-3-1-resolucao.md)
+  [Cálculo: Frequência ↔ Período](02-Bloco-de-Controle-e-Datapath/Q-3-1)
 
 * **Questão 3.3:**  
   [Cálculo: Período ↔ Frequência](Q-3-3/Q-3-3-resolucao.md)
