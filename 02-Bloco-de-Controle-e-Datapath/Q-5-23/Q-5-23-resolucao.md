@@ -24,6 +24,31 @@ Esta tabela é a especificação completa para o bloco de *Lógica Combinacional
 - `n2, n1, n0`: Representam o próprio estado para o qual a máquina deve transicionar no próximo ciclo de clock.  
 - `Dreg_clr, Dreg_ld`, etc.: São os sinais de controle que a FSM envia para o datapath (o bloco operacional) para comandar as ações.
 
+
+s2 s1 s0 B S | n2 n1 n0 L | Dreg_clr Dreg_ld Dctr_clr Dctr_cnt
+------------------------------------------------------------
+0  0  0  0 0 | 0  0  1 0 |     0        0        0        0
+0  0  0  0 1 | 0  0  1 0 |     0        0        0        0
+0  0  0  1 0 | 0  0  1 0 |     0        0        0        0
+0  0  0  1 1 | 0  0  1 0 |     0        0        0        0
+------------------------------------------------------------
+0  0  1  0 0 | 0  0  1 0 |     0        1        0        0
+0  0  1  0 1 | 0  0  1 0 |     0        1        0        0
+0  0  1  1 0 | 0  1  0 0 |     0        1        0        0
+0  0  1  1 1 | 0  1  0 0 |     0        1        0        0
+------------------------------------------------------------
+0  1  0  0 0 | 0  1  1 0 |     0        0        0        0
+0  1  0  0 1 | 0  1  1 0 |     0        0        0        0
+0  1  0  1 0 | 0  1  1 0 |     0        0        0        0
+0  1  0  1 1 | 0  1  1 0 |     0        0        0        0
+------------------------------------------------------------
+0  1  1  0 0 | 1  0  0 0 |     0        0        1        0
+0  1  1  0 1 | 1  0  0 0 |     0        0        1        0
+0  1  1  1 0 | 1  0  0 0 |     0        0        1        0
+0  1  1  1 1 | 1  0  0 0 |     0        0        1        0
+------------------------------------------------------------
+1  0  0  0 0 | 0  0  1 0 |     1        0        0
+
 ---
 
 ### Passo 2: As Equações Booleanas
@@ -33,6 +58,21 @@ Cada equação é a tradução matemática de uma coluna de saída da tabela de 
 
 **Como são obtidas?**  
 Essas equações são derivadas da tabela de estados, geralmente usando métodos de simplificação como Mapas de Karnaugh, para encontrar a forma mais eficiente (soma de produtos).
+
+
+n2 = s1’s1s0B’S + s2’s1s0BS
+
+n1 = s2’s1’s0B + s2’s1s0’ + s2’s1s0S’
+
+n0 = s2’s1’s0’ + s2’s1’s0B’ + s2’s1s0’ + s2’s1s0S’ + s2s1’s0’
+
+Dreg_clr = s2’s1’s0
+
+Dreg_ld = s2s1’s0’
+
+Dctr_clr = s2’s1’s0
+
+Dctr_ctr = s2’s1s0
 
 ---
 
@@ -95,3 +135,4 @@ A frequência máxima em que um circuito pode operar é o inverso do seu atraso 
 
 
 Esta é a velocidade máxima de clock que o medidor de distância pode usar de forma confiável.
+
