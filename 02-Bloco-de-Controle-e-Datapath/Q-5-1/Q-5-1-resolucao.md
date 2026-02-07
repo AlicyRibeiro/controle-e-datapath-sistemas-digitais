@@ -1,88 +1,91 @@
-## Seção 3.2: Armazenando um bit Flip-Flop
+## Seção 5.2: O Método de Projeto RTL
 
-### Questão 3.1
+## Questão 5.1
 
-Calcule o período de relógio para as seguintes frequências de relógio.
+### a)
+Crie uma máquina de estados de alto nível que descreve o seguinte comportamento de sistema. O sistema tem uma entrada **A** de oito bits, uma entrada **d** de um bit e uma saída **S** de 32 bits.
 
----
+A cada ciclo de relógio, se **d = 1**, o sistema deverá somar o valor de **A** à soma acumulada até o momento e colocar esse valor na saída **S**. Ao contrário, se **d = 0**, o sistema deverá subtrair.
 
-### 50 KHz (primeiros computadores)
+Ignore as questões de estouros crescente e decrescente. Não esqueça de incluir um estado de inicialização.  
+Sugestão: Declare e use um registrador interno para guardar a soma.
 
-#### O Princípio Fundamental
-
-A relação entre frequência (f) e período (T) é inversa. O período é simplesmente o inverso da frequência.
-
-**Fórmula:**  
-T = 1 / f
-
-- **T:** Período, medido em segundos (s). É o tempo que dura um único ciclo de clock.  
-- **f:** Frequência, medida em Hertz (Hz). É o número de ciclos de clock que ocorrem em um segundo.
-
-Para os cálculos, precisa converter os prefixos (Kilo, Mega, Giga, Tera) para a unidade base (Hertz) e depois converter o resultado em segundos para uma unidade mais conveniente (microssegundos, nanossegundos, picossegundos).
-
-**Converter Frequência:**  
-50 KHz = 50 × 1.000 Hz = 50.000 Hz  
-
-**Calcular Período:**  
-T = 1 / 50.000 s = 0,00002 s  
-
-**Converter Resultado:**  
-Para converter de segundos para microssegundos (µs), multiplicamos por 1.000.000.  
-
-0,00002 s × 1.000.000 = **20 µs**
+### b)
+Acrescente uma entrada **reset** de um bit ao sistema. Quando **rst = 1**, o sistema deve reset tornando a soma igual a 0.
 
 ---
 
-### 300 MHz (processador da Playstation 2 da Sony)
+A questão pede o projeto de uma **Máquina de Estados de Alto Nível (HLSM)**, que é uma forma de descrever um sistema digital focando no fluxo de dados (ações) e no controle (estados e transições). projetando a máquina passo a passo, incorporando os requisitos das partes (a) e (b).
 
-**Converter Frequência:**  
-300 MHz = 300 × 1.000.000 Hz = 300.000.000 Hz  
 
-**Calcular Período:**  
-T = 1 / 300.000.000 s ≈ 0,00000000333 s  
+## Etapa 1: Definição dos Componentes do Sistema
 
-**Converter Resultado:**  
-Para nanossegundos (ns), multiplicamos por 1.000.000.000.  
+Antes de desenhar os estados, vamos listar todas as peças do nosso sistema, conforme o enunciado:
 
-0,00000000333 s × 1.000.000.000 = **3,33 ns**
+### Entradas:
+- **A (8 bits):** O valor a ser somado ou subtraído.
+- **d (1 bit):** O sinal de controle que define a operação (1 para Somar, 0 para Subtrair).
+- **rst (1 bit):** O sinal de reset (da parte b).
 
----
+### Saída:
+- **S (32 bits):** O resultado final da soma acumulada.
 
-### 3,4 GHz (processador Pentium 4 da Intel)
-
-**Converter Frequência:**  
-3,4 GHz = 3,4 × 1.000.000.000 Hz = 3.400.000.000 Hz  
-
-**Calcular Período:**  
-T = 1 / 3.400.000.000 s ≈ 0,000000000294 s  
-
-**Converter Resultado:**  
-Para picossegundos (ps), multiplicamos por 10¹².  
-
-0,000000000294 s × 1.000.000.000.000 = **294 ps** (ou **0,294 ns**)
+### Registrador Interno:
+- **sum_reg (32 bits):** Sugerido pelo enunciado para guardar a soma acumulada. A saída **S** será uma cópia direta do valor deste registrador.
 
 ---
 
-### 10 GHz (PCs do início da década de 2000)
+## Etapa 2: Definindo os Estados e suas Ações
 
-**Converter Frequência:**  
-10 GHz = 10.000.000.000 Hz  
+Uma HLSM precisa de estados para controlar o comportamento. Para este problema, dois estados são suficientes: um para inicializar e outro para a operação contínua.
 
-**Calcular Período:**  
-T = 1 / 10.000.000.000 s = 0,0000000001 s  
+### Estado Init (Inicialização):
+- **Propósito:** Garantir que o sistema comece em um estado conhecido e limpo.
+- **Ação:** A única ação neste estado é zerar o nosso registrador interno.  
+    - sum_reg := 0
 
-**Converter Resultado:**  
-0,0000000001 s × 10¹² = **100 ps** (ou **0,1 ns**)
+
+
+### Estado Accumulate (Acumulando):
+- **Propósito:** Este é o estado operacional principal, onde o sistema executa a soma ou subtração continuamente a cada ciclo de relógio.
+- **Ações:** As ações são condicionais, baseadas na entrada **d**.
+   - se (d = 1) então sum_reg := sum_reg + A
+   - se (d = 0) então sum_reg := sum_reg - A
+ 
+- **Saída:** A saída **S** deve sempre refletir o valor atual do registrador. Podemos declarar isso como uma ação contínua.
+    - S = sum_reg
+ 
 
 ---
 
-### 1 THz (1 Terahertz)
+## Etapa 3: Definindo as Transições entre os Estados
 
-**Converter Frequência:**  
-1 THz = 1.000.000.000.000 Hz  
+As transições (setas no diagrama) definem como o sistema se move entre os estados.
 
-**Calcular Período:**  
-T = 1 / 1.000.000.000.000 s = 0,000000000001 s  
+### Da Inicialização para a Operação:
+Após zerar o registrador no estado **Init**, o sistema deve começar a operar imediatamente. Portanto, há uma transição incondicional (sempre acontece) do estado **Init** para o **Accumulate**.
 
-**Converter Resultado:**  
-0,000000000001 s × 10¹² = **1 ps**
+### Reset (Reinicialização):
+A entrada **rst** tem a maior prioridade. Se **rst = 1**, o sistema deve voltar ao estado **Init**, não importa onde ele esteja.
+
+Isso é representado por uma transição do estado **Accumulate** para o **Init** com a condição **rst** (que significa rst = 1).
+
+### Operação Normal:
+Enquanto não houver um reset (**rst = 0**), o sistema deve permanecer no estado **Accumulate**, executando a soma/subtração a cada ciclo de relógio.
+
+Isso é representado por uma transição que sai e volta para o estado **Accumulate** (um loop) com a condição **rst'** (que significa rst = 0).
+
+---
+
+## Etapa 4: O Diagrama da Máquina de Estados de Alto Nível (HLSM)
+
+Juntando todos os elementos acima, chegamos ao seguinte diagrama da HLSM:
+
+### Como o circuito funciona de acordo com o diagrama:
+- O sistema começa no estado **Init**. O registrador **sum_reg** é zerado (`:= 0`).
+- No próximo ciclo de relógio, ele se move incondicionalmente para o estado **Accumulate**.
+- Enquanto estiver no estado **Accumulate** e **rst = 0**, a cada ciclo de relógio ele verifica a entrada **d**:  
+- se **d = 1**, ele soma **A** a **sum_reg**;  
+- se **d = 0**, ele subtrai **A**.  
+A saída **S** sempre mostra o valor atual de **sum_reg**.
+- Se em qualquer momento a entrada **rst** se tornar **1**, a FSM seguirá a transição **rst** de volta para o estado **Init**, zerando a soma e reiniciando o processo.
