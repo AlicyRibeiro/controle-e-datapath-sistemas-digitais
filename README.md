@@ -133,10 +133,10 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Análise Temporal de Controle](02-Bloco-de-Controle-e-Datapath/Q-6-32/Q-6-32-resolucao.md)
 
 * **Questão 6.33:**  
-  [Análise de Sinais e Estados](Q-6-33/Q-6-33-resolucao.md)
+  [Análise de Sinais e Estados](02-Bloco-de-Controle-e-Datapath/Q-6-33/Q-6-33-resolucao.md)
 
 * **Questão 6.39:**  
-  [Projeto e Interpretação de Controle](Q-6-39/Q-6-39-resolucao.md)
+  [Projeto e Interpretação de Controle](02-Bloco-de-Controle-e-Datapath/Q-6-39/Q-6-39-resolucao.md)
 
 ---
 
