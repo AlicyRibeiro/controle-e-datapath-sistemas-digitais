@@ -115,10 +115,10 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Análise de Sinais de Controle](02-Bloco-de-Controle-e-Datapath/Q-5-15/Q-5-15-resolucao.md)
 
 * **Questão 5.18:**  
-  [Projeto e Análise de Controle Sequencial](Q-5-18/Q-5-18-resolucao.md)
+  [Projeto e Análise de Controle Sequencial](02-Bloco-de-Controle-e-Datapath/Q-5-18/Q-5-18-resolucao.md)
 
 * **Questão 5.19:**  
-  [Projeto e Análise de Controle Sequencial](Q-5-18/Q-5-18-resolucao.md)
+  [Projeto e Análise de Controle Sequencial](02-Bloco-de-Controle-e-Datapath/Q-5-19/Q-5-19-resolucao.md)
 
 * **Questão 5.22:**  
   [Integração Controle + Datapath](Q-5-22/Q-5-22-resolucao.md)
