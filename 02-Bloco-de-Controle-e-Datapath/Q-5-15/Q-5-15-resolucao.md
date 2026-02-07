@@ -4,6 +4,10 @@
 
 Usando o método de projeto RTL da Tabela 5.1, desenvolva um projeto RTL que computa a soma de todos os números positivos presentes em um conjunto de 16 registradores separados, de 32 bits cada, os quais armazenam os números na forma de complemento de dois. Torne o projeto o mais rápido possível, executando tantos cálculos concorrentemente (em paralelo) quanto for possível. Sugestão: esse é um projeto com predomínio de dados.
 
+#### Tabela 5.1
+
+![Circuito da Questão 2.30 - item a](Q-5-10/figuras/Tabela5.1.jpeg)
+
 ---
 
 ## Objetivo
@@ -104,3 +108,4 @@ Esta FSM gera os sinais de controle para o datapath.
 
 - **Estado Done:**  
   Estado final. Nenhuma ação de controle é necessária. A saída S do datapath agora contém a soma final.
+
