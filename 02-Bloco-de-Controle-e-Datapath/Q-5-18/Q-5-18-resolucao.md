@@ -4,6 +4,11 @@ Usando o método de projeto RTL da Tabela 5.1, desenvolva um projeto RTL de um f
 
 O objetivo do filtro é que a cada ciclo de relógio, a saída seja a média da entrada atual e da entrada do ciclo anterior.
 
+
+#### Tabela 5.1
+
+![Circuito da Questão 2.30 - item a](figuras/Tabela5.1.jpeg)
+
 ---
 
 ## Etapa 1: Máquina de Estados de Alto Nível (HLSM)
@@ -93,3 +98,5 @@ Transição: Se rst=1, volta para Init (n0 = 0). Se rst=0, permanece em Filterin
 ---
 
 Este design separa com sucesso a manipulação dos dados (no datapath) da lógica de controle de tempo (no controller), seguindo o método RTL.
+
+
