@@ -36,16 +36,21 @@ Vamos fazer a quantidade de água fria ser proporcional ao valor de **razao**. A
 
 ### Tabela de Valores
 
-| Entrada razão (binário) | Valor decimal (R) | Cálculo para aguafria                | Aguafria | Aguaquente |
-|-------------------------|-------------------|--------------------------------------|----------|------------|
-| 000 | 0 | round((0/7) * 15) = 0  | 0 (0000) | 15 (1111) |
-| 001 | 1 | round((1/7) * 15) = 2  | 2 (0010) | 13 (1101) |
-| 010 | 2 | round((2/7) * 15) = 4  | 4 (0100) | 11 (1011) |
-| 011 | 3 | round((3/7) * 15) = 6  | 6 (0110) | 9 (1001)  |
-| 100 | 4 | round((4/7) * 15) = 9  | 9 (1001) | 6 (0110)  |
-| 101 | 5 | round((5/7) * 15) = 11 | 11 (1011)| 4 (0100)  |
-| 110 | 6 | round((6/7) * 15) = 13 | 13 (1101)| 2 (0010)  |
-| 111 | 7 | round((7/7) * 15) = 15 | 15 (1111)| 0 (0000)  |
+| Entrada razão (binário) | Valor decimal (R) | Cálculo para aguafria              | Aguafria | Aguaquente |
+|-------------------------|-------------------|------------------------------------|----------|------------|
+| 000                     | 0                 | `round((0/7) * 15) = 0 `             | 0 (0000) | 15 (1111)  |
+| 001                     | 1                 | `round((1/7) * 15) = 2`              | 2 (0010) | 13 (1101)  |
+| 010                     | 2                 | `round((2/7) * 15) = 4`              | 4 (0100) | 11 (1011)  |
+| 011                     | 3                 | `round((3/7) * 15) = 6`              | 6 (0110) | 9 (1001)   |
+| 100                     | 4                 | `round((4/7) * 15) = 9 `             | 9 (1001) | 6 (0110)   |
+| 101                     | 5                 | `round((5/7) * 15) = 11 `            | 11 (1011)| 4 (0100)   |
+| 110                     | 6                 | `round((6/7) * 15) = 13 `            | 13 (1101)| 2 (0010)   |
+| 111                     | 7                 | `round((7/7) * 15) = 15 `            | 15 (1111)| 0 (0000)   |
+
+
+#### Legenda:
+O cálculo de Aguafria utiliza a função round para converter o valor obtido da proporção 𝑅 / 7×15 (r dvidido por 7) — que pode resultar em um número fracionário — para o inteiro mais próximo. Esse arredondamento é necessário porque os níveis de controle de água são representados por valores inteiros de 4 bits, garantindo uma distribuição proporcional e uniforme dos níveis ao longo de toda a faixa de entrada.
+
 
 ---
 
@@ -90,3 +95,4 @@ No estado **Razao3**, as saídas são imediatamente definidas para **aguaquente 
 Se o usuário mudar a **razao** para **101** (decimal 5) mas mantiver **abrir = 1**, a FSM seguirá a seta de transição para o estado **Razao5**, e as saídas mudarão para **aguaquente = 4** e **aguafria = 11**.
 
 Se em qualquer momento o usuário desligar a água (**abrir = 0**), a FSM seguirá a seta correspondente e voltará imediatamente para o estado **Desligado**, zerando as saídas.
+
