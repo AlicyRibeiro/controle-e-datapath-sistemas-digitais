@@ -124,7 +124,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Integração Controle + Datapath](02-Bloco-de-Controle-e-Datapath/Q-5-22/Q-5-22-resolucao.md)
 
 * **Questão 5.23:**  
-  [Integração Controle + Datapath](Q-5-22/Q-5-22-resolucao.md)
+  [Integração Controle + Datapath](02-Bloco-de-Controle-e-Datapath/Q-5-23/Q-5-23-resolucao.md)
 ---
 
 ### Capítulo 6 — Análise Avançada
