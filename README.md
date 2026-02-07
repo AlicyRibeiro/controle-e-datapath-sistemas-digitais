@@ -130,7 +130,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 ### Capítulo 6 — Análise Avançada
 
 * **Questão 6.32:**  
-  [Análise Temporal de Controle](Q-6-32/Q-6-32-resolucao.md)
+  [Análise Temporal de Controle](02-Bloco-de-Controle-e-Datapath/Q-6-32/Q-6-32-resolucao.md)
 
 * **Questão 6.33:**  
   [Análise de Sinais e Estados](Q-6-33/Q-6-33-resolucao.md)
