@@ -21,6 +21,8 @@ A solução divide o sistema em duas partes, exatamente como o método RTL exige
 
 ## Arquitetura de Bloco de Controle e Bloco Operacional
 
+![Circuito da Questão 2.30 - item a](figuras/FSM.jpeg)
+
 ---
 
 ## O Bloco Operacional (Datapath) – O Diagrama da Direita
@@ -86,3 +88,4 @@ Este é o estado inicial e de repouso.
 ## Conclusão
 
 A imagem mostra a implementação da parte (a) da Questão 5.10, onde a HLSM original foi dividida com sucesso em um **Bloco de Controle (Controller FSM)** e um **Bloco Operacional (Datapath)** que trabalham juntos para executar a tarefa. O Controller dá as ordens (`w_addr_ld`, `w_data_ld`) e o Datapath as executa.
+
