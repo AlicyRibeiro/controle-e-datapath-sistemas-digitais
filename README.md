@@ -121,7 +121,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Projeto e Análise de Controle Sequencial](02-Bloco-de-Controle-e-Datapath/Q-5-19/Q-5-19-resolucao.md)
 
 * **Questão 5.22:**  
-  [Integração Controle + Datapath](Q-5-22/Q-5-22-resolucao.md)
+  [Integração Controle + Datapath](02-Bloco-de-Controle-e-Datapath/Q-5-22/Q-5-22-resolucao.md)
 
 * **Questão 5.23:**  
   [Integração Controle + Datapath](Q-5-22/Q-5-22-resolucao.md)
