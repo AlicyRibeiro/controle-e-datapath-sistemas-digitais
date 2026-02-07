@@ -1,88 +1,104 @@
-## Seção 3.2: Armazenando um bit Flip-Flop
+## Questão 5.6
 
-### Questão 3.1
-
-Calcule o período de relógio para as seguintes frequências de relógio.
+Projete uma máquina de estados de alto nível para um contador crescente de quatro bits, com uma entrada **cnt** de controle de contagem, uma entrada **clr** para clear e uma saída **tc** de término de contagem. Use o método de projeto RTL da Tabela 5.1 para converter a máquina de estados de alto nível em um bloco de controle e um bloco operacional. Use um registrador e um incrementador combinacional no bloco operacional, não simplesmente um registrador contador. Projete o bloco de controle até o nível de registrador de estado e portas lógicas.
 
 ---
 
-### 50 KHz (primeiros computadores)
+## Etapa 1: Máquina de Estados de Alto Nível (HLSM)
 
-#### O Princípio Fundamental
+Primeiro, descrevemos o comportamento do contador de forma abstrata, sem nos preocuparmos com os componentes de hardware. A HLSM mostra os estados e as ações que ocorrem.
 
-A relação entre frequência (f) e período (T) é inversa. O período é simplesmente o inverso da frequência.
+**Entradas:**  
+- cnt (habilitar contagem)  
+- clr (limpar)
 
-**Fórmula:**  
-T = 1 / f
+**Saída:**  
+- tc (término da contagem)
 
-- **T:** Período, medido em segundos (s). É o tempo que dura um único ciclo de clock.  
-- **f:** Frequência, medida em Hertz (Hz). É o número de ciclos de clock que ocorrem em um segundo.
+**Variável Interna (Registrador):**  
+- count (um valor de 4 bits)
 
-Para os cálculos, precisa converter os prefixos (Kilo, Mega, Giga, Tera) para a unidade base (Hertz) e depois converter o resultado em segundos para uma unidade mais conveniente (microssegundos, nanossegundos, picossegundos).
+### Diagrama da HLSM
 
-**Converter Frequência:**  
-50 KHz = 50 × 1.000 Hz = 50.000 Hz  
+A FSM pode ser descrita com dois estados principais: um estado de repouso/contagem (**Counting**) e um estado momentâneo para limpar (**Clear**).
 
-**Calcular Período:**  
-T = 1 / 50.000 s = 0,00002 s  
+### Descrição do Comportamento
 
-**Converter Resultado:**  
-Para converter de segundos para microssegundos (µs), multiplicamos por 1.000.000.  
+**Estado Clear:**  
+Este é o estado inicial e o destino do reset. A única ação é zerar o contador (count := 0). Ele transiciona incondicionalmente para o estado Counting.
 
-0,00002 s × 1.000.000 = **20 µs**
+**Estado Counting:**  
+- Se clr = 1, a máquina é forçada a voltar para o estado Clear.  
+- Se clr = 0 e cnt = 1, a máquina incrementa o contador (count := count + 1).  
+- Se clr = 0 e cnt = 0, a máquina mantém o valor do contador (count := count).
 
----
-
-### 300 MHz (processador da Playstation 2 da Sony)
-
-**Converter Frequência:**  
-300 MHz = 300 × 1.000.000 Hz = 300.000.000 Hz  
-
-**Calcular Período:**  
-T = 1 / 300.000.000 s ≈ 0,00000000333 s  
-
-**Converter Resultado:**  
-Para nanossegundos (ns), multiplicamos por 1.000.000.000.  
-
-0,00000000333 s × 1.000.000.000 = **3,33 ns**
+**Saída tc:**  
+A saída tc é definida como 1 sempre que count == 15. Esta é uma saída condicional.
 
 ---
 
-### 3,4 GHz (processador Pentium 4 da Intel)
+## Etapa 2: Projeto do Bloco Operacional (Datapath)
 
-**Converter Frequência:**  
-3,4 GHz = 3,4 × 1.000.000.000 Hz = 3.400.000.000 Hz  
+O datapath é o conjunto de componentes que armazena e manipula os dados. Baseado na HLSM, precisamos de hardware para:
 
-**Calcular Período:**  
-T = 1 / 3.400.000.000 s ≈ 0,000000000294 s  
+- Armazenar o valor de 4 bits count  
+- Incrementar count em 1  
+- Carregar o valor 0000 em count  
+- Comparar count com 15 para gerar tc  
 
-**Converter Resultado:**  
-Para picossegundos (ps), multiplicamos por 10¹².  
+### Componentes do Datapath
 
-0,000000000294 s × 1.000.000.000.000 = **294 ps** (ou **0,294 ns**)
+- Um Registrador de 4 bits com habilitação de carga (ld_count) para armazenar o valor atual de count  
+- Um Incrementador Combinacional (+1) que recebe count e gera count + 1  
+- Um Multiplexador (MUX) 2-para-1 que seleciona qual valor será carregado no registrador: o valor incrementado (count + 1) ou o valor 0000. O sinal de seleção será sel_clr  
+- Um Comparador Combinacional que verifica se count == 1111_b e gera a saída tc  
 
----
+### Sinais de Controle (do Controller para o Datapath)
 
-### 10 GHz (PCs do início da década de 2000)
-
-**Converter Frequência:**  
-10 GHz = 10.000.000.000 Hz  
-
-**Calcular Período:**  
-T = 1 / 10.000.000.000 s = 0,0000000001 s  
-
-**Converter Resultado:**  
-0,0000000001 s × 10¹² = **100 ps** (ou **0,1 ns**)
+- **ld_count (1 bit):** Habilita a escrita no registrador count  
+- **sel_clr (1 bit):** Seleciona a entrada do MUX (0 = Incrementar, 1 = Limpar)
 
 ---
 
-### 1 THz (1 Terahertz)
+## Etapa 3: Projeto do Bloco de Controle (Controller)
 
-**Converter Frequência:**  
-1 THz = 1.000.000.000.000 Hz  
+O controller é uma FSM mais simples que lê as entradas externas (cnt, clr) e gera os sinais de controle para o datapath (ld_count, sel_clr).
 
-**Calcular Período:**  
-T = 1 / 1.000.000.000.000 s = 0,000000000001 s  
+**Entradas:**  
+- cnt  
+- clr  
 
-**Converter Resultado:**  
-0,000000000001 s × 10¹² = **1 ps**
+**Saídas:**  
+- ld_count  
+- sel_clr  
+
+Podemos criar um controller puramente combinacional, pois as ações dependem diretamente das entradas:
+
+**Lógica para ld_count:**  
+O registrador deve carregar um novo valor se estivermos limpando (clr = 1) OU se estivermos contando (cnt = 1).  
+Equação:  
+
+    ld_count = clr + cnt
+
+
+
+**Lógica para sel_clr:**  
+O MUX deve selecionar a entrada 0000 apenas quando estivermos limpando (clr = 1).  
+Equação:  
+
+    sel_clr = clr
+
+
+A saída tc é gerada diretamente pelo datapath, então o controller não precisa se preocupar com ela.
+
+---
+
+## Etapa 4: Implementação do Bloco de Controle (Nível de Portas)
+
+Esta etapa, pedida no enunciado, consiste em desenhar o circuito para as equações do bloco de controle. Como o nosso controller é combinacional e não precisa de estados internos, não há um "registrador de estado" para ele. A lógica é direta.
+
+---
+
+## Conclusão
+
+Ao conectar a saída count do datapath de volta à sua entrada, e conectar as saídas do bloco de controle (ld_count, sel_clr) às respectivas entradas de controle do datapath, o sistema completo está projetado. Esta separação entre datapath (operações) e controller (sequenciamento) é a essência do método de projeto RTL.
