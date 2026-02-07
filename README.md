@@ -109,7 +109,7 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
   [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-10/Q-5-10-resolucao.md)
 
 * **Questão 5.11:**  
-  [Controle de Operações e Fluxo de Dados](Q-5-6/Q-5-6-resolucao.md)
+  [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-11/Q-5-11-resolucao.md)
 
 * **Questão 5.15:**  
   [Análise de Sinais de Controle](Q-5-15/Q-5-15-resolucao.md)
