@@ -84,21 +84,47 @@ Abaixo estão listadas as questões pertencentes ao **Bloco de Controle e Datapa
 
 ### Capítulo 5 — Controle Integrado ao Datapath
 
-* **Questão 5.1 – 5.3:**  
-  [Análise de Operações no Datapath](Q-5-1/Q-5-1-resolucao.md)
+* **Questão 5.1:**  
+  [Análise de Operações no Datapath](02-Bloco-de-Controle-e-Datapath/Q-5-1/Q-5-1-resolucao.md)
 
-* **Questão 5.6 – 5.11:**  
+  * **Questão 5.2:**  
+  [Análise de Operações no Datapath](02-Bloco-de-Controle-e-Datapath/Q-5-2/Q-5-2-resolucao.md)
+
+* **Questão 5.3:**  
+  [Análise de Operações no Datapath](02-Bloco-de-Controle-e-Datapath/Q-5-3/Q-5-3-resolucao.md)
+
+* **Questão 5.6:**  
+  [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-6/Q-5-6-resolucao.md)
+
+  * **Questão 5.7:**  
+  [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-7/Q-5-7-resolucao.md)
+
+* **Questão 5.8:**  
+  [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-8/Q-5-8-resolucao.md)
+
+  * **Questão 5.9:**  
+  [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-9/Q-5-9-resolucao.md)
+
+* **Questão 5.10:**  
+  [Controle de Operações e Fluxo de Dados](02-Bloco-de-Controle-e-Datapath/Q-5-10/Q-5-10-resolucao.md)
+
+  * **Questão 5.11:**  
   [Controle de Operações e Fluxo de Dados](Q-5-6/Q-5-6-resolucao.md)
 
 * **Questão 5.15:**  
   [Análise de Sinais de Controle](Q-5-15/Q-5-15-resolucao.md)
 
-* **Questão 5.18 & 5.19:**  
+* **Questão 5.18:**  
   [Projeto e Análise de Controle Sequencial](Q-5-18/Q-5-18-resolucao.md)
 
-* **Questão 5.22 – 5.23:**  
+  * **Questão 5.19:**  
+  [Projeto e Análise de Controle Sequencial](Q-5-18/Q-5-18-resolucao.md)
+
+* **Questão 5.22:**  
   [Integração Controle + Datapath](Q-5-22/Q-5-22-resolucao.md)
 
+* **Questão 5.23:**  
+  [Integração Controle + Datapath](Q-5-22/Q-5-22-resolucao.md)
 ---
 
 ### Capítulo 6 — Análise Avançada
