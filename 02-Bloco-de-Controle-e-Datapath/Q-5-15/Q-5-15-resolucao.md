@@ -6,7 +6,7 @@ Usando o método de projeto RTL da Tabela 5.1, desenvolva um projeto RTL que com
 
 #### Tabela 5.1
 
-![Circuito da Questão 2.30 - item a](Q-5-10/figuras/Tabela5.1.jpeg)
+![Circuito da Questão 2.30 - item a](02-Bloco-de-Controle-e-Datapath/Q-5-10/figuras/Tabela5.1.jpeg)
 
 ---
 
@@ -108,4 +108,5 @@ Esta FSM gera os sinais de controle para o datapath.
 
 - **Estado Done:**  
   Estado final. Nenhuma ação de controle é necessária. A saída S do datapath agora contém a soma final.
+
 
