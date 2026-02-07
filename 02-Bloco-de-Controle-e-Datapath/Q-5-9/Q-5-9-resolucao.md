@@ -1,4 +1,3 @@
-![Circuito da Questão 2.30 - item a](figuras/Questão3.15.jpeg)
 
 ## Questão 5.9
 
@@ -114,3 +113,4 @@ Esta é a etapa final solicitada. O bloco de controle é uma FSM mais simples qu
 - Nas transições (setas), são mostradas as condições de entrada que causam a mudança de estado.  
   Por exemplo, para sair do estado **Wait**, é preciso que `m = 1` ou `b1 = 1` ou `b2 = 1`.  
   Para sair do estado **CheckS1**, a FSM olha para a entrada de status `total_ge_r1` (que vem do comparador no datapath).
+
